@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookMark Landing Page</title>
+  </head>
+
+  <!-- max width is set to 2000px cz some screen are ultra wide and we dont want the body to be stretched too much -->
+  <body class="
+  max-w-[2000px]
+  bg-gray-100
+  text-neutral-900
+  font-rubik
+  ">
+
+  <!-- ! NavBar -->
+  <nav class="
+  bg-gray-100
+  mx-auto
+  p-4
+  ">
+    <!-- container containing all 3 of the navbar items...logo + hamburger icon + menuItems -->
+    <div class="
+    container
+    mx-auto
+    flex
+    items-center
+    justify-between
+    ">
+
+    <!-- here the classes are to make the logo be centered to the navBar at large screen cz I like it this way -->
+      <a href="/" alt="BookMark Logo" aria-label="Go to homePage" class="
+      focus:outline-none
+      lg:absolute 
+      lg:left-1/2 
+      lg:-translate-x-1/2 
+      lg:top-9 
+      z-50
+      ">
+        <img src="/images/logo-bookmark.svg" width="200" class="w-48 md:w-64 lg:72" alt="Logo">
+      </a>
+
+    <!-- hamburger button -->
+    <button id="menu" class="
+    lg:hidden 
+    text-neutral-800
+    hover:text-blue-500
+    transition-colors
+    " aria-expanded="false" aria-label="Open Menu">
+
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+
+    </button>
+
+    <!-- nav items -->
+    <!-- right left 0 makes it stick to the rightSide and then top-16 moves it down at the bottom of navbar..items-center pulls everything in the middle and their width is full size of the screen -->
+
+      <div role="menubar" class="
+      hidden
+      flex-col
+      gap-4
+      absolute
+      right-0
+      left-0
+      top-16
+      bg-gray-100
+      shadow-xl
+      text-lg
+      text-center
+      p-6
+      items-center 
+
+      lg:flex
+      lg:flex-row
+      lg:shadow-none
+      lg:static
+      lg:justify-between
+      lg:w-full
+      ">
+
+        <!-- menuitems -->
+        <a role="menuitems" class="
+        uppercase
+        py-1
+        px-6
+        hover:text-red-500
+        transition-colors
+        " href="/">Features</a>
+
+        <a role="menuitems" class="
+        uppercase
+        py-1
+        px-6
+        hover:text-red-500
+        transition-colors
+
+        lg:mr-auto
+        " href="/">Pricing</a>
+
+        <a role="menuitems" class="
+        uppercase
+        py-1
+        px-6
+        hover:text-red-500
+        transition-colors
+        " href="/">Contact</a>
+
+        <!-- login button in navBar -->
+        <a role="menuitems" class="
+          uppercase
+          py-2
+          px-6
+        bg-red-500
+        text-white
+        hover:text-red-500
+        hover:bg-white
+          rounded-sm
+          border-[1px]
+          hover:border-[1px]
+        hover:border-red-500
+          shadow-md
+          hover:shadow-none
+          transition-all
+        " href="/">Login</a>
+        
+      </div>
+      <!-- menubar ends here -->
+
+    </div>
+    <!-- container ends here -->
+
+  </nav>
+  <!-- ! NavBar ends here -->
+
+
+  <!-- ! Main -->
+
+  <main class="
+  grid
+  gap-8
+  sm:gap-14
+  md:gap-16
+  lg:gap-20
+  px-8
+  py-4
+  overflow-hidden
+  ">
+
+  <!-- * Section 1 -->
+    <section aria-labelledby="bookmark_manager"> 
+
+      <h2 id="bookmark_manager" class="sr-only text-center">BookMark Manager</h2>
+
+      <!-- div containing everythng.. justify-evenly puts it at center and at lg: keepts the gap even-->
+      <div class="
+      flex 
+      flex-wrap-reverse
+      gap-2
+      justify-evenly
+      ">
+
+      <!-- div containing the text -->
+        <div class="
+        flex 
+        gap-6 
+        flex-wrap  
+        flex-col 
+        items-start 
+        lg:justify-center
+        ">
+          
+      <!-- div containing the heading and para -->
+          <div class="
+          flex 
+          flex-wrap 
+          flex-col 
+          items-start 
+          gap-2
+          ">
+            <h2 class="
+            capitalize 
+            text-center
+            text-3xl
+            md:text-4xl
+            font-bold
+            ">A simple bookmark manager
+            </h2>
+
+            <p class="
+            mt-4
+            text-xl
+            text-center
+            md:text-left
+            lg:text-left
+            text-gray-500
+            max-w-lg
+            ">
+              A clean and simple interface to organize your favourite websites. Open a new 
+              browser tab and see your sites load instantly. Try it for free.
+            </p>
+          </div>
+
+      <!-- div containing the buttons -->
+          <div class="
+          flex 
+          w-full 
+          px-2 
+          gap-4 
+          md:gap-8
+          lg:gap-8
+          justify-start
+          ">
+            <a class="
+            px-2
+            md:px-6
+            lg:px-6
+            py-4
+            bg-blue-500
+            text-white
+            rounded-md
+            hover:shadow-lg
+            transition-all
+            " href="#">Get it on Chrome</a>
+            <a class="
+            px-2
+            md:px-6
+            lg:px-6
+            py-4
+            bg-gray-200
+            shadow-lg
+            rounded-md
+            hover:shadow-none
+            transition-all
+            " href="#">Get it on Firefox</a>
+          </div>
+
+        </div>
+
+        <img src="/images/illustration-hero.svg" class="my-12" alt="Hero Image">
+
+      </div>
+    </section>
+  <!-- * Section 1 ends here -->
+
+  <!-- * Section 2 -->
+    <section aria-labelledby="features">
+
+      <h2 id="features" class="text-center sr-only">Our Features</h2>
+
+      <!-- Contains everythng -->
+      <div class="
+      flex
+      flex-col
+      items-center
+      gap-4
+      ">
+      
+      <!-- Text -->
+      <div>
+        
+          <h2 class="
+            my-2
+            text-4xl
+            lg:text-5xl
+            font-bold
+            text-center
+            ">Features
+          </h2>
+          
+          <p class="
+          my-12
+          text-xl
+          lg:text-2xl
+          text-center
+          text-gray-500
+          max-w-lg
+          ">
+            Our aim is to make it quick and easy for you to access your favourite websites. 
+            Your bookmarks sync between your devices so you can access them on the go.
+          </p>
+
+        </div>
+
+        <!-- Feature Card Section -->
+        <div class="
+        flex
+        flex-col
+        gap:8
+        lg:flex-row
+        lg:justify-between
+        ">
+
+          <div class="
+          flex
+          lg:w-max
+          justify-center
+          text-center
+          border-t-2
+          border-gray-300
+          py-6
+          lg:px-12
+          lg:border-t-0
+          lg:border-b-2
+          ">
+            <a class="
+            text-xl 
+            font-medium
+            text-neutral-400
+            hover:text-neutral-700
+            border-b-4
+            border-transparent
+            hover:border-b-4
+            hover:border-red-500
+            transition-all
+            cursor-pointer
+            " href="/">
+              Simple Bookmarking
+            </a>
+          </div>
+
+          <div class="
+          flex
+          justify-center
+          lg:w-max
+          text-center
+          border-t-2
+          border-gray-300
+          py-6
+          lg:px-12
+          lg:border-t-0
+          lg:border-b-2
+          ">
+            <a class="text-xl 
+            font-medium
+            text-neutral-400
+            hover:text-neutral-700
+            border-b-4
+            border-transparent
+            hover:border-b-4
+            hover:border-red-500
+            transition-all
+            cursor-pointer
+            " href="/">
+              Speedy Searching
+            </a>
+          </div>
+
+          <div class="
+          flex
+          justify-center
+          lg:w-max
+          text-center
+          border-t-2
+          border-gray-300
+          py-6
+          lg:px-12
+          lg:border-t-0
+          lg:border-b-2
+          ">
+            <a class="text-xl 
+            font-medium
+            text-neutral-400
+            hover:text-neutral-700
+            border-b-4
+            border-transparent
+            hover:border-b-4
+            hover:border-red-500
+            transition-all
+            cursor-pointer
+            " href="/">
+              Easy Sharing
+            </a>
+          </div>
+
+        </div>
+        <!-- Feature Card Section ends here -->
+
+      </div>
+
+    </section>
+  <!-- * Section 2 ends here -->
+
+  <!-- * Section 3 -->
+  <section aria-labelledby="bookmark_1click">
+
+    <h2 id="bookmark_1click" class="sr-only text-center">BookMark One Click</h2>
+
+    <!-- div containing everythng.. justify-evenly puts it at center and at lg: keepts the gap even-->
+    <div class="
+    flex 
+    flex-wrap
+    gap-2
+    md:gap-24
+    lg:gap-32
+    justify-evenly
+    ">
+
+    <img src="/images/illustration-features-tab-1.svg" class="my-8" alt="Hero Image">
+    
+    <!-- div containing the text -->
+    <div class="
+    flex 
+    gap-6 
+    flex-wrap
+    flex-col 
+    items-start 
+    lg:justify-center
+    ">
+      
+  <!-- div containing the heading and para -->
+      <div class="
+      flex 
+      flex-wrap 
+      flex-col 
+      items-center 
+      md:items-start 
+      gap-2
+      ">
+        <h2 class="
+        capitalize 
+        text-center
+        text-3xl
+        md:text-4xl
+        font-bold
+        ">Bookmark in one click
+        </h2>
+
+        <p class="
+        mt-4
+        text-xl
+        text-center
+        md:text-left
+        lg:text-left
+        text-gray-500
+        max-w-lg
+        ">
+          A clean and simple interface to organize your favourite websites. Open a new 
+          browser tab and see your sites load instantly. Try it for free.
+        </p>
+      </div>
+
+      <!-- Need to make it disappear on md and sm screens but dont knw how to rn -->
+  <!-- div containing the buttons -->
+      <div class="
+      flex 
+      w-full 
+      px-2 
+      gap:4
+      md:gap-8
+      lg:gap-8
+      justify-center
+      md:justify-start
+      ">
+        <a class="
+        px-6
+        md:px-8
+        lg:px-10
+        py-4
+        bg-blue-700
+        text-white
+        rounded-md
+        hover:shadow-lg
+        transition-all
+        " href="#">More Info</a>
+      </div>
+
+    </div>
+    
+    </div>
+  </section>
+  <!-- * Section 3 ends here -->
+
+  <!-- * Section 4 -->
+  <section aria-labelledby="download_area">
+    
+    <h2 id="download_area" class="text-center sr-only">Download Area</h2>
+
+    <div class="
+    flex
+    flex-col
+    items-center
+    ">
+
+    <!-- Text -->
+      <div class="
+      text-center
+      ">
+        <h2 class="
+        my-4
+        text-3xl
+        md:text-4xl
+        font-medium
+        ">
+        Download the extension</h2>
+        <p class="
+        my-2
+        text-lg
+        text-gray-500
+        max-w-lg
+        ">We have got more browsers in the pipeline. Please do let us know if you've got a favorite you would like us to prioritize.</p>
+      </div>
+
+      <!-- Card Area -->
+      <div class="
+      my-8
+      flex
+      flex-col
+      lg:flex-row
+      gap-16
+      xl:gap-36
+      ">
+
+      <!-- The Card -->
+        <div class="
+        bg-white
+        rounded-lg
+        shadow-xl
+        ">
+        
+        <!-- image and text -->
+          <div class="
+          p-8
+          pb-4
+          px-12
+          flex
+          flex-col
+          text-center
+          ">
+
+            <img src="/images/logo-chrome.svg" alt="Chrome">
+
+            <h4 class="
+            my-2
+            text-2xl
+            font-semibold
+            ">Add to Chrome</h4>
+
+            <p class="
+            text-lg
+            text-gray-500
+            ">Minimum version 62</p>
+          </div>
+
+          <!-- Download Button -->
+          <div class="
+          border-t-8
+          border-dotted
+          border-gray-100
+          mt-4
+          p-8
+          px-2
+          flex
+          justify-center
+          ">
+            <a class="
+            p-4
+            capitalize
+            rounded-md
+            bg-blue-700
+            text-white
+            shadow-lg
+            hover:shadow-none
+            transition-all
+            " href="/">Add & install extension</a>
+          </div>
+
+
+        </div>
+
+      <!-- The Card -->
+        <div class="
+        bg-white
+        rounded-lg
+        shadow-xl
+        ">
+        
+        <!-- image and text -->
+          <div class="
+          p-8
+          pb-4
+          px-12
+          flex
+          flex-col
+          text-center
+          ">
+
+            <img src="/images/logo-firefox.svg" alt="Chrome">
+
+            <h4 class="
+            my-4
+            text-2xl
+            font-semibold
+            ">Add to fireFox</h4>
+
+            <p class="
+            text-lg
+            text-gray-500
+            ">Minimum version 46</p>
+          </div>
+
+          <!-- Download Button -->
+          <div class="
+          border-t-8
+          border-dotted
+          border-gray-100
+          mt-4
+          p-8
+          px-2
+          flex
+          justify-center
+          ">
+            <a class="
+            p-4
+            capitalize
+            rounded-md
+            bg-blue-700
+            text-white
+            shadow-lg
+            hover:shadow-none
+            transition-all
+            " href="/">Add & install extension</a>
+          </div>
+
+
+        </div>
+
+      <!-- The Card -->
+        <div class="
+        bg-white
+        rounded-lg
+        shadow-xl
+        ">
+        
+        <!-- image and text -->
+          <div class="
+          p-8
+          pb-4
+          px-12
+          flex
+          flex-col
+          text-center
+          ">
+
+            <img src="/images/logo-opera.svg" alt="Chrome">
+
+            <h4 class="
+            my-2
+            text-2xl
+            font-semibold
+            ">Add to fireFox</h4>
+
+            <p class="
+            text-lg
+            text-gray-500
+            ">Minimum version 46</p>
+          </div>
+
+          <!-- Download Button -->
+          <div class="
+          border-t-8
+          border-dotted
+          border-gray-100
+          mt-4
+          p-8
+          px-2
+          flex
+          justify-center
+          ">
+            <a class="
+            p-4
+            capitalize
+            rounded-md
+            bg-blue-700
+            text-white
+            shadow-lg
+            hover:shadow-none
+            transition-all
+            " href="/">Add & install extension</a>
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <!-- * Section 4 ends here -->
+  
+  <!-- * Section 5 -->
+  <section aria-labelledby="accordian">
+
+    <h2 id="accordian" class="text-center sr-only">Most Asked questions</h2>
+
+    <div class="
+    flex
+    flex-col
+    items-center
+    ">
+
+    <!-- Text -->
+      <div class="
+      text-center
+      ">
+        
+        <h2 class="
+        my-4
+        capitalize
+        font-semibold
+        text-3xl
+        lg:text-4xl
+        ">Frequently asked questions</h2>
+
+        <p class="
+        my-4
+        text-gray-500
+        text-lg
+        max-w-lg
+        ">Here are some of our FAQs. If you have any other questions you’d like 
+          answered please feel free to email us.</p>
+      </div>
+
+    <!-- Accordian Area -->
+      <div class="
+      flex
+      flex-col
+      items-center1
+      ">
+
+      <!-- Question 1 -->
+        <div class="
+        mb-4
+        pb-2
+        relative
+        overflow-hidden
+        max-w-[500px]
+        border-b-2
+        border-gray-200
+        ">
+          <input class="
+          peer
+          absolute
+          top-0
+          inset-x-0
+          z-10
+          w-full
+          opacity-0
+          cursor-pointer
+          h-12
+          " type="checkbox">
+
+          <!-- Question Heading -->
+          <div class="
+          flex
+          items-center
+          h-12
+          w-full
+          ">
+            <h1 class="
+            text-xl
+            ">What is Bookmark?</h1>
+          </div>
+
+          <!-- Arrow Icon -->
+          <div class="
+          absolute
+          top-3
+          right-3
+          text-blue-700
+          rotate-0
+          peer-checked:rotate-180 
+          peer-checked:text-red-500
+          transition-all duration-500
+          ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+
+          <!-- Answer -->
+          <div class="
+          overflow-hidden
+          max-h-0
+          peer-checked:max-h-40
+          transition-all duration-500
+          ">
+            <div class="py-4">
+              <p class="text-gray-500">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+                justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      <!-- Question 2 -->
+        <div class="
+        mb-4
+        pb-2
+        relative
+        overflow-hidden
+        max-w-[500px]
+        border-b-2
+        border-gray-200
+        ">
+          <input class="
+          peer
+          absolute
+          top-0
+          inset-x-0
+          z-10
+          w-full
+          opacity-0
+          cursor-pointer
+          h-12
+          " type="checkbox">
+
+          <!-- Question Heading -->
+          <div class="
+          flex
+          items-center
+          h-12
+          w-full
+          ">
+            <h1 class="
+            text-xl
+            ">How can I request a new browser?</h1>
+          </div>
+
+          <!-- Arrow Icon -->
+          <div class="
+          absolute
+          top-3
+          right-3
+          text-blue-700
+          rotate-0
+          peer-checked:rotate-180 
+          peer-checked:text-red-500
+          transition-all duration-500
+          ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+
+          <!-- Answer -->
+          <div class="
+          overflow-hidden
+          max-h-0
+          peer-checked:max-h-40
+          transition-all duration-500
+          ">
+            <div class="py-4">
+              <p class="text-gray-500">
+                Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
+                Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
+                ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
+                Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      <!-- Question 3 -->
+        <div class="
+        mb-4
+        pb-2
+        relative
+        overflow-hidden
+        max-w-[500px]
+        border-b-2
+        border-gray-200
+        ">
+          <input class="
+          peer
+          absolute
+          top-0
+          inset-x-0
+          z-10
+          w-full
+          opacity-0
+          cursor-pointer
+          h-12
+          " type="checkbox">
+
+          <!-- Question Heading -->
+          <div class="
+          flex
+          items-center
+          h-12
+          w-full
+          ">
+            <h1 class="
+            text-xl
+            ">Is there a mobile app?</h1>
+          </div>
+
+          <!-- Arrow Icon -->
+          <div class="
+          absolute
+          top-3
+          right-3
+          text-blue-700
+          rotate-0
+          peer-checked:rotate-180 
+          peer-checked:text-red-500
+          transition-all duration-500
+          ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+
+          <!-- Answer -->
+          <div class="
+          overflow-hidden
+          max-h-0
+          peer-checked:max-h-40
+          transition-all duration-500
+          ">
+            <div class="py-4">
+              <p class="text-gray-500">
+                Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
+                urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
+                sollicitudin ex et ultricies bibendum.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      <!-- Question 4 -->
+        <div class="
+        mb-4
+        pb-2
+        relative
+        overflow-hidden
+        max-w-[500px]
+        border-b-2
+        border-gray-200
+        
+        ">
+          <input class="
+          peer
+          absolute
+          top-0
+          inset-x-0
+          z-10
+          w-full
+          opacity-0
+          cursor-pointer
+          h-12
+          " type="checkbox">
+
+          <!-- Question Heading -->
+          <div class="
+          flex
+          items-center
+          h-12
+          w-full
+          ">
+            <h1 class="
+            text-xl
+            ">What about other Chromium browsers?</h1>
+          </div>
+
+          <!-- Arrow Icon -->
+          <div class="
+          absolute
+          top-3
+          right-3
+          text-blue-700
+          rotate-0
+          peer-checked:rotate-180 
+          peer-checked:text-red-500
+          transition-all duration-500
+          ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+
+          <!-- Answer -->
+          <div class="
+          overflow-hidden
+          max-h-0
+          peer-checked:max-h-40
+          transition-all duration-500
+          ">
+            <div class="py-4">
+              <p class="text-gray-500">
+                Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
+                vitae neque eget nisl gravida pellentesque non ut velit.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Button -->
+      <div class="
+      flex  
+      px-2 
+      justify-center
+      ">
+        <a class="
+        px-8
+        py-4
+        bg-blue-700
+        text-white
+        rounded-md
+        hover:shadow-lg
+        transition-all
+        " href="#">More Info</a>
+      </div>
+
+    </div>
+
+  </section>
+  <!-- * Section 5 ends here -->
+
+  <!-- * Section 6 -->
+  <section aria-labelledby="email">
+
+    <h2 class="text-center sr-only">Stay Up To Date</h2>
+
+    <div class="
+    bg-blue-700
+    -mx-16
+    text-white
+    px-12
+    py-8
+    ">
+    <!-- did minus margin on x axis to make it span all the way thru cz main has padding of 8 on each side -->
+
+      <!-- Text -->
+      <div class="
+      text-center
+      py-4
+      ">
+
+        <p class="
+        text-lg
+        uppercase
+        ">35,000+ have already joined</p>
+
+        <h2 class="
+        my-4
+        text-3xl
+        ">Stay up-to-date with what we're doing</h2>
+      </div>
+
+      <!-- form -->
+      <form class="flex flex-wrap justify-center gap-2" id="form">
+
+        <!-- input box and label -->
+        <div class="relative py-2">
+
+          <input type="email" id="email" placeholder="Enter your email address" class="
+          w-[300px]
+          lg:w-[450px]
+          py-2
+          peer
+          placeholder-transparent
+          text-blue-600
+          rounded-md
+          ">
+
+          <label for="email" class="
+          text-gray-500
+          text-md
+          capitalize
+          absolute
+          -top-4
+          left-2
+          -translate-y-1/2
+          peer-placeholder-shown:left-4
+          peer-placeholder-shown:top-1/2
+          peer-focus:-top-4
+          peer-focus:left-2
+          peer-focus:text-white
+          transition-all duration-200
+          ">Email Address</label>
+
+        </div>
+        
+        <!-- Button -->
+        <div class="
+        flex  
+        px-2 
+        py-2
+        ">
+          <a class="
+          w-[300px]
+          px-8
+          py-2
+          bg-red-500
+          text-white
+          text-center
+          rounded-md
+          hover:shadow-lg
+          transition-all
+          " href="#">Contact Us</a>
+        </div>
+
+      </form>
+
+    </div>
+  </section>
+  <!-- * Section 6 ends here -->
+
+  <!-- * Section 7 -->
+  <section aria-labelledby="footer">
+
+    <h2 id="footer" class="sr-only text-center">Footer</h2>
+
+    <div class="
+    bg-blue-900
+    flex-col
+    lg:flex-row
+    -mx-16
+    -my-8
+    sm:-my-16
+    md:-my-16
+    lg:-my-20
+    py-4
+    pb-8
+    px-6
+    ">
+
+    <div class="
+    flex
+    gap-8
+    px-8
+    py-4
+    flex-col
+    lg:flex-row
+    items-center
+    md:justify-evenly
+    lg:justify-evenly
+    text-gray-200
+    text-center  
+    ">
+      <!-- NavBar links -->
+        <a href="/">
+          <img src="/images/logo-bookmark.svg" width="200" alt="Bookmark Logo">
+        </a>
+
+        <div class="flex flex-col lg:flex-row gap-6 md:gap-8 lg:gap-12">
+          <a class="uppercase" href="/">Features</a>
+          <a class="uppercase" href="/">Pricing</a>
+          <a class="uppercase" href="/">Contact</a>
+        </div>
+
+        <!-- Social links -->
+        <div class="
+        flex
+        gap-12
+        ">
+          <a class="" href="/">
+            <img src="/images/icon-facebook.svg" alt="facebook">
+          </a>
+          <a class="" href="/">
+            <img src="/images/icon-twitter.svg" alt="twitter">
+          </a>
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+  <!-- * Section 7 ends here -->
+
+  </main>
+  <!-- ! Main ends here -->
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
