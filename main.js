@@ -2,6 +2,7 @@ import "./style.css";
 
 // NavBar 
 const navBtn = document.querySelector("#menu");
+const closeBtn = document.querySelector(".cross");
 const menuBar = document.querySelector('[role="menubar"]');
 
 navBtn.addEventListener("click", () => {
@@ -12,7 +13,23 @@ navBtn.addEventListener("click", () => {
 
   menuBar.classList.toggle("hidden");
   menuBar.classList.toggle("flex");
+
+  navBtn.classList.add("hidden");
+  closeBtn.classList.remove("hidden");
 });
+
+closeBtn.addEventListener("click",() => {
+  const isExpanded = JSON.parse(navBtn.getAttribute("aria-expanded")); // by default aria-expanded is false
+
+  closeBtn.setAttribute("aria-expanded", !isExpanded);
+  // we are setting aria-expanded to opposite of wht isExpanded is..if true than false and if false then true
+
+  menuBar.classList.toggle("hidden");
+  menuBar.classList.toggle("flex");
+
+  navBtn.classList.remove("hidden");
+  closeBtn.classList.add("hidden");
+})
 
 // Dark/Light mode toggle
 const sunIcon = document.querySelector(".sun");
