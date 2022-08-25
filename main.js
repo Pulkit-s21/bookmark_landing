@@ -14,6 +14,56 @@ navBtn.addEventListener("click", () => {
   menuBar.classList.toggle("flex");
 });
 
+// Dark/Light mode toggle
+const sunIcon = document.querySelector(".sun");
+const moonIcon = document.querySelector(".moon");
+
+// Theme vars
+const userTheme = localStorage.getItem("theme");
+const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+// Icon toggling
+const iconToggle = () => {
+  sunIcon.classList.toggle("hidden");
+  moonIcon.classList.toggle("hidden");
+}
+
+// Initial theme check
+const themeCheck = () => {
+  if (userTheme === 'dark' || (systemTheme && userTheme)){
+    document.documentElement.classList.add("dark");
+    moonIcon.classList.add("hidden");
+    return;
+  }
+  sunIcon.classList.add("hidden");
+}
+
+// Manual switch
+const themeSwtch = () => {
+  if (document.documentElement.classList.contains("dark")){
+    document.documentElement.classList.remove("dark");
+    localStorage.setItem("theme","light");
+    iconToggle();
+    return;
+  }
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme","dark");
+    iconToggle();
+}
+
+// call theme switch on clicking button
+sunIcon.addEventListener("click",()=>{
+  themeSwtch();
+});
+
+moonIcon.addEventListener("click",()=>{
+  themeSwtch();
+});
+
+// invoke them on initial load
+themeCheck();
+
+
 // Form Validation.. not working rn if I keep it here but works if in HTML but messes up my label thing
 
 function validation(){
