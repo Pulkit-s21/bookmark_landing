@@ -38,7 +38,9 @@
       lg:top-9 
       z-50
       ">
-        <img src="/images/logo-bookmark.svg" width="200" class="w-48 md:w-64 lg:72" alt="Logo">
+      <svg width="200" height="50" class="icon w-48 md:w-64 lg:72">
+        <use xlink:href="/images/logo.svg#logo-bookmark"></use>
+      </svg>
       </a>
 
     <!-- hamburger button -->
@@ -587,6 +589,7 @@
       <!-- The Card -->
         <div class="
         bg-white
+        dark:bg-neutral-700
         rounded-lg
         shadow-xl
         ">
@@ -608,6 +611,7 @@
             text-2xl
             font-semibold
             text-neutral-900
+            dark:text-gray-200
             ">Add to Chrome</h4>
 
             <p class="
@@ -645,6 +649,7 @@
       <!-- The Card -->
         <div class="
         bg-white
+        dark:bg-neutral-700
         rounded-lg
         shadow-xl
         ">
@@ -667,6 +672,7 @@
             text-2xl
             font-semibold
             text-neutral-900
+            dark:text-gray-200
             ">Add to fireFox</h4>
 
             <p class="
@@ -704,6 +710,7 @@
       <!-- The Card -->
         <div class="
         bg-white
+        dark:bg-neutral-700
         rounded-lg
         shadow-xl
         ">
@@ -725,6 +732,7 @@
             text-2xl
             font-semibold
             text-neutral-900
+            dark:text-gray-200
             ">Add to fireFox</h4>
 
             <p class="
@@ -804,7 +812,7 @@
       <div class="
       flex
       flex-col
-      items-center1
+      items-center
       ">
 
       <!-- Question 1 -->
@@ -821,7 +829,6 @@
           peer
           absolute
           top-0
-          inset-x-0
           z-10
           w-full
           opacity-0
@@ -891,7 +898,6 @@
           peer
           absolute
           top-0
-          inset-x-0
           z-10
           w-full
           opacity-0
@@ -963,7 +969,6 @@
           peer
           absolute
           top-0
-          inset-x-0
           z-10
           w-full
           opacity-0
@@ -1035,7 +1040,6 @@
           peer
           absolute
           top-0
-          inset-x-0
           z-10
           w-full
           opacity-0
@@ -1154,13 +1158,13 @@
         <!-- input box and label -->
         <div class="relative py-2">
 
-          <input type="email" id="email" placeholder="Enter your email address" class="
+          <input title="Please enter a valid address" pattern="[a-zA-z0-9.+_-]+@[a-zA-Z]+\.[a-z.]{2,}" required type="email" id="email" placeholder="Enter your email address" class="
           w-[300px]
           lg:w-[450px]
           py-4
           peer
           placeholder-transparent
-          text-blue-600
+          text-neutral-800
           rounded-md
           ">
 
@@ -1199,7 +1203,7 @@
           rounded-md
           hover:shadow-lg
           transition-all
-          " href="#">Contact Us</a>
+          " type="submit" href="/">Contact Us</a>
         </div>
 
       </form>
@@ -1241,8 +1245,10 @@
     text-center  
     ">
       <!-- NavBar links -->
-        <a href="/">
-          <img src="/images/logo-bookmark.svg" width="200" alt="Bookmark Logo">
+        <a class="footer-logo" href="/">
+          <svg width="200" height="50" class="icon w-48 md:w-64 lg:72">
+            <use xlink:href="/images/logo.svg#logo-bookmark"></use>
+          </svg>
         </a>
 
         <div class="flex flex-col lg:flex-row gap-6 md:gap-8 lg:gap-12">

@@ -6,7 +6,7 @@ const closeBtn = document.querySelector(".cross");
 const menuBar = document.querySelector('[role="menubar"]');
 
 navBtn.addEventListener("click", () => {
-  const isExpanded = JSON.parse(navBtn.getAttribute("aria-expanded")); // by default aria-expanded is false
+  const isExpanded = JSON.parse(navBtn.getAttribute("aria-expanded")); // by default aria-expanded is false..it will store boolean value
 
   navBtn.setAttribute("aria-expanded", !isExpanded);
   // we are setting aria-expanded to opposite of wht isExpanded is..if true than false and if false then true
